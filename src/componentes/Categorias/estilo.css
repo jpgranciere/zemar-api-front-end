@@ -1,0 +1,39 @@
+h1{
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2a44;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 0px;
+}
+
+.div-categoria{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div-qtd-categorias{
+    background-color: #eef2ff;
+    border-radius: 20px;
+    padding: 4px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-qtd-categorias p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #3b4cca;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.div-icone-categoria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
