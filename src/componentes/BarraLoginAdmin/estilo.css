@@ -1,0 +1,59 @@
+.barra-login-admin {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.menu-titulo h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.menu-titulo button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a2e;
+    padding: 4px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.menu-titulo button:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.botao-entrar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #f4f4f8;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a2e;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.botao-entrar:hover {
+    background: #e8e8f0;
+}
+
+
+

@@ -11,10 +11,12 @@ import Wind from "../Icones/Wind"
 
 
 function CardsCategoria(){
+    const url = process.env.REACT_APP_URL_CATEGORIA;
+
     const [categoria, setCategoria] = useState([]);
 
     useEffect(()=> {
-        fetch('http://localhost:8080/admin/categoria')
+        fetch(url)
         .then(response => response.json())
         .then(dados => setCategoria(dados))
     }, []);

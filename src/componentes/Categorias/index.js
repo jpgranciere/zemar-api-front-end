@@ -3,10 +3,12 @@ import LayoutGrid from '../Icones/LayoutGrid';
 import './estilo.css'
 
 function Categorias(){
+    const url = process.env.REACT_APP_URL_CATEGORIA;
+
     const [qtdCategorias, setQtdCategorias] = useState([]);
 
     useEffect(()=> {
-        fetch('http://localhost:8080/admin/categoria')
+        fetch(url)
         .then(response => response.json())
         .then(dados => setQtdCategorias(dados))
     },[])
