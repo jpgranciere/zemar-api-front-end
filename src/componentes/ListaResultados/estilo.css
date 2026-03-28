@@ -1,0 +1,101 @@
+.lista-resultados {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    animation: fadeUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.resultados-titulo {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 16px 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.resultado-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.15s;
+    border-bottom: 1px solid var(--border);
+}
+
+.resultado-item:last-child {
+    border-bottom: none;
+}
+
+.resultado-item:hover {
+    background: var(--surface-2);
+}
+
+.resultado-item > svg {
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.resultado-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.resultado-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resultado-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.resultado-nome {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+}
+
+.resultado-tags {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.resultado-codigo {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--surface-2);
+    padding: 2px 7px;
+    border-radius: 20px;
+}
+
+.resultado-categoria {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--indigo);
+    background: var(--indigo-light);
+    padding: 2px 7px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}

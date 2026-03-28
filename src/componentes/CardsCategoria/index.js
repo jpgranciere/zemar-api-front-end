@@ -8,11 +8,11 @@ import SprayCan from "../Icones/SprayCan"
 import Trash from "../Icones/Trash"
 import Waves from "../Icones/Waves"
 import Wind from "../Icones/Wind"
-
+import { useNavigate } from 'react-router-dom'
 
 function CardsCategoria(){
     const url = process.env.REACT_APP_URL_CATEGORIA;
-
+    const navigate = useNavigate()
     const [categoria, setCategoria] = useState([]);
 
     useEffect(()=> {
@@ -21,20 +21,19 @@ function CardsCategoria(){
         .then(dados => setCategoria(dados))
     }, []);
 
-    const categoriasLimpas = categoria.map(item =>
-        item.replaceAll("_", " ").toLowerCase().replace(/^./, c => c.toUpperCase())
-    )
+    const icones = [DropLets, SprayCan, Waves, Eraser, Wind, Hand, Trash, Sparkles]
 
-    const icones = [DropLets, SprayCan, Waves,Eraser, Wind, Hand, Trash, Sparkles]
+
 
     return (
     <div className="div-categoria-cards">
-        {categoriasLimpas.map((item, index) => {
+        {categoria.map((item, index) => {
             const Icone = icones[index]
+            const nomeFormatado = item.replaceAll("_", " ").toLowerCase().replace(/^./, c => c.toUpperCase())
             return (
-                <div className="cards" key={item}>
+                <div className="cards" key={item} onClick={() => navigate(`/categoria/${item}`)}>
                     <Icone size={24} />
-                    <p>{item}</p>
+                    <p>{nomeFormatado}</p>
                     <a>ver produto</a>
                 </div>
             )
